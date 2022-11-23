@@ -19,10 +19,10 @@ describe('fetchBreedDescription', () => {
     });
   });
 
-  it('returns null for an invalid breed, via callback', (done) => {
+  it('returns "Invalid Breed" for an invalid breed, via callback', (done) => {
     fetchBreedDescription('Cockatoo', (err, desc) => {
-      // we expect no error for this scenario
-      assert.equal(err, null);
+      
+      assert.equal(err, 'Invalid Breed');
 
       const expectedDesc = null;
 
