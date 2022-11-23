@@ -16,6 +16,7 @@ const breedFetcher = (breed) => {
       return;
     }
     
+    //convert JSON to object
     const parsedData = JSON.parse(body)[0];
 
     if (parsedData === undefined) {
